@@ -25,3 +25,10 @@ git log 提交的记录
 
 ## 时光穿梭机
 
+修改某个文件后会提交到暂存区,此时需要用git add命令提交到暂存区,然后再git commit到本地仓库
+
+当某个文件被git add 后,如果不想追踪些文件,git add 后紧跟着使用git reset HEAT,此时本地仓库就没有这个文件
+
+## 版本回退
+
+yspkjfdjfkldjfkjdskjfdlsjgds
