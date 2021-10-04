@@ -75,5 +75,24 @@ git rm 文件名,删除文件,commit 后的文件也会被删除,也就是说工
 
 ## 推送到远程仓库
 
+```shell
+git add 文件名
+git commit -m "推送信息"
+git push -u origin main
+```
+
+## 本地分支
+
+现实中很多都是在分支上进行开发的,完成后再合并到主分支
+
+```shell
+git checkout branch 切换到指定分支
+git checkout -b new_branch 新建分支并切换到此新建分支
+git branch -d branch 删除指定分支
+git brandch 查看所有分支,有*号的表示当前分支
+git merge branch 合并分支
+git branch -m | -M oldbranch newbranch 重命名分支,如果名字已存在,则用-M强制,否则用-m进行重命名
+```
+
 
 
