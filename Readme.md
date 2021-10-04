@@ -102,3 +102,10 @@ git branch -m | -M oldbranchname newbranchname 重命名分支,如果名字已�
 
 
 
+## 分支的push与pull
+
+```
+git branch -a 查看本地与远程分支
+git push origin branchname 推送本地分支至好远程
+```
+
