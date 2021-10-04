@@ -71,7 +71,7 @@ git reset --hard 标识符(一般取标识符的前6位就可以,如果不行就
 
 当在工作区删除了一个被git add 和git commit 后的文件后,工作区此时已经没有了这个文件 ,但用git status 查看状态会看相关信息,此时本地仓库还是有此文件的,此时可以用git checkout -- 文件名(全部)来恢复此文件到工作区.(文件名可以根据git status来获取到标识为deledet 的那个文件  )
 
-git rm 文件名,删除文件,commit 后的文件也会被删除,也就是说工作区和本地仓库的都会被删除,查看本地仓库的文件可以用get ls-files命令
+git rm 文件名,用于删除文件,commit 后的文件也会被删除,也就是说工作区和本地仓库的都会被删除,查看本地仓库的文件可以用get ls-files命令
 
 ## 推送到远程仓库
 
@@ -92,6 +92,7 @@ git branch -d branch 删除指定分支
 git brandch 查看所有分支,有*号的表示当前分支
 git merge branch 合并分支
 git branch -m | -M oldbranch newbranch 重命名分支,如果名字已存在,则用-M强制,否则用-m进行重命名
+//主分支上的文件在其他分支也会有,切换到其他分支时,在其他分支操作的文件不会出现在主分支中,可以使用 git ls-files 来查看当前分支下本地仓库的所有文件
 ```
 
 
