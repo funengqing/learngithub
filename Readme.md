@@ -31,4 +31,16 @@ git log 提交的记录
 
 ## 版本回退
 
-yspkjfdjfkldjfkjdskjfdlsjgds
+使用git log -5 --pretty=oneline来查看commit 的标识符及commit 的信息,数字可以变的
+
+使用git reflog 查看此前的操作,看不到commit的标识符时用(如关闭了窗口或清空了窗口)
+
+git reset --hard HEAT^  回退到此版本的前一个版本
+
+git reset --hard HEAT^^  回退到此版本的前二个版本,依次类推,但不推荐
+
+git reset --hard HEAT~1 回退到此版本的前一个版本,数字表示要回退到此版本的前N个版本
+
+git reset --hard 标识符(一般取标识符的前6位就可以,如果不行就取全部) 跳到指定的版本
+
+所以可以看到所有的版本都是根据commit 来操作的
