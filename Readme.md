@@ -86,15 +86,28 @@ git push -u origin main
 现实中很多都是在分支上进行开发的,完成后再合并到主分支
 
 ```shell
-git checkout branch 切换到指定分支
-git checkout -b new_branch 新建分支并切换到此新建分支
-git branch -d branch 删除指定分支
+git checkout branchname 切换到指定分支
+git checkout -b new_branchname 新建分支并切换到此新建分支
+git branch -d branchname 删除指定分支
 git brandch 查看所有分支,有*号的表示当前分支
-git merge branch 合并分支
-git branch -m | -M oldbranch newbranch 重命名分支,如果名字已存在,则用-M强制,否则用-m进行重命名
+git merge branchname 合并分支,需要先切换到主分支
+git branch -m | -M oldbranchname newbranchname 重命名分支,如果名字已存在,则用-M强制,否则用-m进行重命名(先用-m,不行时才用-M,两者用其一)
 //主分支上的文件在其他分支也会有,切换到其他分支时,在其他分支下所操作的文件不会出现在主分支中,可以使用 git ls-files 来查看当前分支下本地仓库的所有文件
 //对其他分支的操作不会影响到主分支
+//在其他分支操作主分支上的相同文件时,需要git add 和 git commit,因为合并分支时会用到,否则无法合并
+//在其他分支上新加文件时,不需要上述的两条命令也可以合并
+//在其他分支上删除主分区上相同文件?测试
+//切换到某一个非主分支时,如果此时在工作区进行文件操作,是不会影响到主分支的
 ```
 
 
+
+## 分支的push与pull
+
+```shell
+git branch -a 查看本地与远程分支
+git push origin branchname 推送本地分支到远程分支
+git push origin :remote_branchname  删除远程分支,本地分支还在
+git checkout -b local_branchname origin/remote_branchname
+```
 
