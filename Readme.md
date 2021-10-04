@@ -108,6 +108,6 @@ git branch -m | -M oldbranchname newbranchname 重命名分支,如果名字已�
 git branch -a 查看本地与远程分支
 git push origin branchname 推送本地分支到远程分支
 git push origin :remote branchname 删除远程分支,但本地分支还在
-git checkout -b local_branch origin/remote_branch 拉取远程指定分支并在本地创建分支
+git checkout -b local_branch origin/remote_branch 拉取远程指定分支并在本地创建分支(一般是接手时会接取某个分支来进行开发)
 ```
 
