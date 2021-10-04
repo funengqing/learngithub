@@ -14,7 +14,7 @@ ssh -T git@github.com
 
 
 
-## 新创建时
+## 新创建时会提示
 
 ```shell
 git init
